@@ -1,4 +1,3 @@
-//Status: Accepted
 /*
 Read in the dimensions
 Read in the picture information
@@ -14,12 +13,12 @@ const int MAX_SIZE = 1000;
 char picture[MAX_SIZE][MAX_SIZE];
 
 int main(int argc, char** argv){
-	
+
 	int height, width;
 	scanf("%d%d", &height, &width);
 	for(int i = 0; i < height; i++)
 		scanf("%s", picture[i]);
-	
+
 	int count = 0;
 	for(int i = 0; i < height; i++){
 		for(int j = 0; j < width; j++){
@@ -32,6 +31,6 @@ int main(int argc, char** argv){
 		}
 	}
 	printf("%d", count);
-	
+
 	return EXIT_SUCCESS;
 }

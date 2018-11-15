@@ -1,4 +1,3 @@
-//Status: Accepted
 /*
 For each test case
 	Read in the number
@@ -14,7 +13,7 @@ using namespace std;
 int main(int argc, char** argv){
 	ios::sync_with_stdio(false);
 	cin.tie(nullptr);
-	
+
 	int numTests, sum;
 	string num;
 	for(cin >> numTests; numTests > 0; numTests--){
@@ -23,6 +22,6 @@ int main(int argc, char** argv){
 		for(int i = num[0] == '-' ? 1 : 0; i < num.size(); i++) sum += (num[i] - '0');
 		cout << sum << endl;
 	}
-	
+
 	return EXIT_SUCCESS;
 }

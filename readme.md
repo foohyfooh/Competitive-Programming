@@ -2,8 +2,6 @@
 
 The repository is meant to host the competitive programming solutions that I and my ICPC teams have made.
 
-
-
 ## Table of Contents
 - [COJ](/COJ) - [Site](http://coj.uci.cu/index.xhtml)
 - [MOG](/MOG) - [Site](http://matcomgrader.com/)

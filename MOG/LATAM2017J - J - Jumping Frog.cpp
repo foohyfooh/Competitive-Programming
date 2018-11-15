@@ -1,4 +1,3 @@
-//Status: Accepted
 /*
 Read in S of length N
 Count the number of rocks and ponds

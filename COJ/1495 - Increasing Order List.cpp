@@ -1,4 +1,3 @@
-//Status: Accepted
 /*
 Read N
 Read all the numbers Ni

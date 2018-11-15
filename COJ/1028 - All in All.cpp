@@ -1,4 +1,3 @@
-//Status: Accepted
 #include <iostream>
 #include <cstdlib>
 
@@ -15,7 +14,7 @@ if didn't exit loop then is the encrypted version of the string
 */
 
 int main(int argc, char** argv) {
-	
+
 	char s1[31], s2[31];
 	while(std::cin >> s1 >> s2){
 		int i = 0, j = 0;
@@ -30,13 +29,13 @@ int main(int argc, char** argv) {
 			if(!found) goto failure;
 			i++;
 		}
-				
+
 		if(true){
 			std::cout << "Yes\n";
 		}else{
 			failure: std::cout << "No\n";
 		}
 	}
-	
+
 	return EXIT_SUCCESS;
 }

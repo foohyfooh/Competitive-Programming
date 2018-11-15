@@ -1,4 +1,3 @@
-//Status: Accepted
 #include <cstdio>
 #include <cstdlib>
 #include <cstring>
@@ -7,12 +6,12 @@ using namespace std;
 char words[1001][9];
 
 int main(int argc, char** argv){
-	
+
 	int numTests, numWords;
 	bool found, wrong;
 	scanf("%d", &numTests);
 	while(numTests--){
-		scanf("%d", &numWords);		
+		scanf("%d", &numWords);
 		for(int i = 1; i <= numWords; i++) scanf("%s", &words[i]);
 		for(int i = 1; i < numWords; i++){
 			wrong = found = false;
@@ -28,6 +27,6 @@ int main(int argc, char** argv){
 		}
 		printf("-1\n");
 	}
-	
+
 	return EXIT_SUCCESS;
 }

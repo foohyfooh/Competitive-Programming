@@ -1,4 +1,3 @@
-//Status: Accepted
 /*
 Read N
 Print the count of the numbers in the range [1, N] that are coprime with N
@@ -27,7 +26,7 @@ bool arecoprime(lld a, lld b){
 int main(int argc, char** argv){
 	ios::sync_with_stdio(false);
 	cin.tie(nullptr);
-	
+
 	lld num, count = 0;
 	cin >> num;
 	for(int i = 1; i < num; i++){
@@ -39,7 +38,7 @@ int main(int argc, char** argv){
 		}
 	}
 	cout << count;
-	
+
 	return EXIT_SUCCESS;
 }
 

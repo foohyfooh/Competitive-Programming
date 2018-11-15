@@ -1,4 +1,3 @@
-//Status: Accepted
 /*
 Read N
 Read all N values of C

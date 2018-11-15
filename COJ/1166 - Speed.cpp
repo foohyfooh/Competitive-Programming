@@ -1,4 +1,3 @@
-//Status: Accepted
 /*
 Determine the number of even and odd
 */
@@ -7,7 +6,7 @@ Determine the number of even and odd
 using namespace std;
 
 int main(int argc, char** argv) {
-	
+
 	int t, n, val, even, odd;
 	for(cin >> t; t > 0; t--){
 		even = odd = 0;
@@ -18,6 +17,6 @@ int main(int argc, char** argv) {
 		}
 		cout << even << " even and " << odd << " odd.\n";
 	}
-	
+
 	return EXIT_SUCCESS;
 }

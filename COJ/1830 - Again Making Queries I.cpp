@@ -1,4 +1,3 @@
-//Status: Accepted
 /*
 Read N, U, Q
 For each line of updates
@@ -22,7 +21,7 @@ int values[MAX];
 
 int main(int argc, char** argv) {
 	int numCells, numUpdates, numQuestions, pos, updateVal, start, end, total;
-	
+
 	scanf("%d%d%d", &numCells, &numUpdates, &numQuestions);
 	for(; numUpdates > 0; numUpdates--){
 		scanf("%d%d", &pos, &updateVal);
@@ -32,12 +31,12 @@ int main(int argc, char** argv) {
 	}
 	values[0] = 0;
 	for(int i = 2; i <= numCells; i++) values[i] = (values[i - 1] + values[i]) % MOD;
-	
+
 	for(; numQuestions > 0; numQuestions--){
 		scanf("%d%d", &start, &end);
 		total = (values[end] + MOD - values[start - 1]) % MOD;
 		printf("%d\n", total);
 	}
-	
+
 	return EXIT_SUCCESS;
 }

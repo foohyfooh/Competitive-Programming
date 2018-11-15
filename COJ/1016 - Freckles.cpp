@@ -1,4 +1,3 @@
-//Status: Accepted
 /*
 Kruskal's Algorithm
 

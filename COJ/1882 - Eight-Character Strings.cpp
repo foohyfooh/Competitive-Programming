@@ -1,4 +1,3 @@
-//Status: Accepted
 /*
 Read in the string
 Keep a count of each time every 8 character substring appears in the string
@@ -25,7 +24,7 @@ priority_queue<psi, vector<psi>, decltype(cmp)> Q(cmp);
 int main(int argc, char** argv){
 	ios::sync_with_stdio(false);
 	cin.tie(nullptr);
-	
+
 	cin >> s;
 	for(int i = 0; (i + CHECK_LENGTH) <= s.length(); i++){
 		sub = s.substr(i, CHECK_LENGTH);
@@ -35,6 +34,6 @@ int main(int argc, char** argv){
 	psi top = Q.top();
 	if(top.second < 2) cout << "Solution was not found";
 	else cout << top.first;
-	
+
 	return EXIT_SUCCESS;
 }

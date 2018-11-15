@@ -1,10 +1,9 @@
-//Status: Accepted
 /*
 For each word
 	If it is palindrome; If so print palindrome
 	If not check every split for being two palindromes; If so print bi-palindrome
 	Else print non-palindrome
-	
+
 */
 #include <iostream>
 #include <string>
@@ -20,7 +19,7 @@ bool isPalindrome(string word){
 int main(int argc, char** argv){
 	ios::sync_with_stdio(false);
 	cin.tie(nullptr);
-	
+
 	int numWords;
 	for(cin >> numWords; numWords > 0; numWords--){
 		string word;
@@ -35,11 +34,11 @@ int main(int argc, char** argv){
 				goto end;
 			}
 		}
-		
+
 		cout << "non-palindrome\n";
 		end:;
 	}
-	
-	
+
+
 	return EXIT_SUCCESS;
 }

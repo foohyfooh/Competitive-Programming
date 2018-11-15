@@ -1,4 +1,3 @@
-//Status: Accepted
 /*
 Read the number of beers
 Check the conditions

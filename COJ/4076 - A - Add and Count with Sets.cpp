@@ -1,4 +1,3 @@
-//Status: Accepted
 /*
 Read Q
 For Q lines

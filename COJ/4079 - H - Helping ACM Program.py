@@ -1,4 +1,3 @@
-# Status: Accepted
 '''
 Read R, S
 Read N

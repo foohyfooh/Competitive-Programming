@@ -1,4 +1,3 @@
-//Status: Accepted
 /*
 Longest Common Subsequence is a possible solution. Didn't use that since the lengths were not specified.
 
@@ -10,7 +9,7 @@ If the count of matched characters is equal to the length of S then print Yes el
 using namespace std;
 
 int main(int argc, char** argv){
-	
+
 	ios::sync_with_stdio(false);
 	cin.tie(NULL);
 
@@ -21,6 +20,6 @@ int main(int argc, char** argv){
 			if(T[i] == S[s]) s++;
 		cout << (s == S.length() ? "Yes" : "No") << endl;
 	}
-	
+
 	return EXIT_SUCCESS;
 }

@@ -1,4 +1,3 @@
-//Status: Accepted
 /*
 Read in the number of employees
 For each employee

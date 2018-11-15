@@ -1,4 +1,3 @@
-//Status: Accepted
 /*
 Read a, b, c
 Read d, e, f

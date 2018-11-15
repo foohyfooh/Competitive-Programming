@@ -1,4 +1,3 @@
-//Status: Accepted
 /*
 For each test
 	Read in the A and B
@@ -41,7 +40,7 @@ int kmp(string text, string pattern){
 int main(int argc, char** argv){
 	ios::sync_with_stdio(false);
 	cin.tie(nullptr);
-	
+
 	int numTests;
 	cin >> numTests;
 	for(int t = 1; t <= numTests; t++){
@@ -49,6 +48,6 @@ int main(int argc, char** argv){
 		cin >> text >> pattern;
 		cout << "Case " << t << ": " << kmp(text, pattern) << endl;
 	}
-	
+
 	return EXIT_SUCCESS;
 }

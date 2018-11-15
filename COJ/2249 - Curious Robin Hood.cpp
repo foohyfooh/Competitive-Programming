@@ -1,4 +1,3 @@
-//Status: Accepted
 /*
 Use a Fenwick Tree for the compute the range sum queries
 */
@@ -17,18 +16,18 @@ void update(int pos, int max, int val){
 
 int query(int pos){
 	int sum = 0;
-	for(; pos > 0; pos -= pos & -pos) 
+	for(; pos > 0; pos -= pos & -pos)
 		sum += sums[pos];
 	return sum;
 }
 
 int main(int argc, char** argv){
 	int numTests, numSacks, numQueries, operation, pos, val, start, end;
-	
+
 	scanf("%d", &numTests);
 	for(int t = 1; t <= numTests; t++){
 		printf("Case %d:\n", t);
-		
+
 		scanf("%d%d", &numSacks, &numQueries);
 		memset(sacks, 0, sizeof(sacks));
 		memset(sums, 0, sizeof(sums));
@@ -36,7 +35,7 @@ int main(int argc, char** argv){
 			scanf("%d", &sacks[i]);
 			update(i, numSacks, sacks[i]);
 		}
-		
+
 		while(numQueries--){
 			scanf("%d", &operation);
 			if(operation == 1){
@@ -54,6 +53,6 @@ int main(int argc, char** argv){
 			}
 		}
 	}
-	
+
 	return EXIT_SUCCESS;
 }

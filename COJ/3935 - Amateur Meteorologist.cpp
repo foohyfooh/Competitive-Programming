@@ -1,4 +1,3 @@
-//Status: Accepted
 /*
 For each day
 	Forcast the the result based on the previous actual result
@@ -13,14 +12,14 @@ using namespace std;
 string arr[100], forcast[100];
 
 int main(int argc, char** argv){
-	
+
 	int D;
 	cin >> D;
 	int total, cloudCount = 0;
 	for(int i = 0; i < D; i++){
 		cin >> arr[i];
 	}
-	
+
 	forcast[0] = "sunny";
 	total = arr[0] == forcast[0] ? 1 : 0;
 	for(int i = 1; i < D; i++){
@@ -41,9 +40,9 @@ int main(int argc, char** argv){
 		}
 		if(arr[i] == forcast[i]) total++;
 	}
-	
+
 	cout << total;
-	
-	
+
+
 	return EXIT_SUCCESS;
 }

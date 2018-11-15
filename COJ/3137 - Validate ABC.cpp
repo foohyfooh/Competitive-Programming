@@ -1,4 +1,3 @@
-//Status: Accepted
 /*
 For each test case
 	If A and B result in C by an operation, return YES else return NO

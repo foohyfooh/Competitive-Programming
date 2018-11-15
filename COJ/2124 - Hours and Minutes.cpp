@@ -1,4 +1,3 @@
-//Status: Accepted
 /*
 For each line
 	Read A

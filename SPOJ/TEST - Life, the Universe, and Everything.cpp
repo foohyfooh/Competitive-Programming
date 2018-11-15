@@ -1,4 +1,3 @@
-//Status: Accepted
 /*
 Read in numbers and output it.
 Stop when 42 is read

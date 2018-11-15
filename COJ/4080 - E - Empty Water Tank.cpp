@@ -1,4 +1,3 @@
-//Status: Accepted
 /*
 Read N
 For N test cases

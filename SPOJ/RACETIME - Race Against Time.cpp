@@ -1,4 +1,3 @@
-//Status: Accepted
 /*
 Read N and Q
 

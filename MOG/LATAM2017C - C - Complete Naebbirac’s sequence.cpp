@@ -1,4 +1,3 @@
-//Status: Accepted
 /*
 Read in the number K and the sequence length N
 
@@ -6,7 +5,7 @@ The sequence length needs to be a multiple of K to be correct where each number 
 
 If the sequence is a multiple of K then the max needs to be removed and the min added
 
-If the sequence us not a multiple then it can be possible corrected if the sequence has 1 extra or 1 less than a multiple of K
+If the sequence is not a multiple then it can be possible corrected if the sequence has 1 extra or 1 less than a multiple of K
 	If 1 less then add the number with the lowest count
 	If 1 more then remove the number with the highest count
 
@@ -57,7 +56,6 @@ int main(int argc, char** argv){
 		else printf("*\n");
 	}else{ //unsolvable
 		printf("*\n");
-		return EXIT_SUCCESS;
 	}
 
 	return EXIT_SUCCESS;

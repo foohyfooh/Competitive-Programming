@@ -1,4 +1,3 @@
-//Status: Accepted
 /*
 Triangle Problem using Top-Down Approach
 */
@@ -12,7 +11,7 @@ const int MAX_TRIANGLE = 100;
 int triangle[MAX_TRIANGLE][MAX_TRIANGLE];
 
 int main(int argc, char** argv){
-	
+
 	int numTests, triangleSize, end, largest;
 	for(scanf("%d", &numTests); numTests > 0; numTests--){
 		scanf("%d", &triangleSize);
@@ -27,9 +26,9 @@ int main(int argc, char** argv){
 				if(triangle[i][j] > largest) largest = triangle[i][j];
 			}
 		}
-		
+
 		printf("%d\n", largest);
 	}
-	
+
 	return EXIT_SUCCESS;
 }

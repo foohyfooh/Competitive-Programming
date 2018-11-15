@@ -1,4 +1,3 @@
-//Status: Accepted
 /*
 Read the string
 Reverse the first half and the second half independant of each other
@@ -21,6 +20,6 @@ int main(int argc, char** argv){
     if(word.length() % 2 != 0) split++;
     reverse(word.begin() + split, word.end());
     cout << word;
-    
+
     return EXIT_SUCCESS;
 }

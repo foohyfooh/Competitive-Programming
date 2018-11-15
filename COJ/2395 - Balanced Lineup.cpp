@@ -1,4 +1,3 @@
-//Status: Accepted
 /*
 Read in the heights of the cows
 Determine the shortest and tallest using Square Root Decomposition
@@ -47,11 +46,11 @@ int query(int start, int end, int _sqrt, F comp, int val, int computed[MAX_SQRT]
 #define q(f, i, B) query(start - 1, end - 1, _sqrt, f, i, B)
 
 int main(int argc, char** argv){
-	
+
 	int numCows, numQueries, _sqrt, sqrtp, p;
 	scanf("%d%d", &numCows, &numQueries);
 	_sqrt = ((int) sqrt(numCows)) + 1;
-	
+
 	set(shortest, MAX_SQRT, INF);
 	set(tallest, MAX_SQRT, NINF);
 	for(int i = 0; i < numCows; i++){
@@ -60,13 +59,13 @@ int main(int argc, char** argv){
 		shortest[p] = min(shortest[p], heights[i]);
 		tallest[p]  = max(tallest[p], heights[i]);
 	}
-	
+
 	int start, end, diff;
 	while(numQueries--){
 		scanf("%d%d", &start, &end);
 		diff = q(max, NINF, tallest) - q(min, INF, shortest);
 		printf("%d\n", diff);
 	}
-	
+
 	return EXIT_SUCCESS;
 }

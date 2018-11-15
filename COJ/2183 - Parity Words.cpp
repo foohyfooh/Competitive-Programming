@@ -1,4 +1,3 @@
-//Status: Accepted
 /*
 For each test case
 	Read in the string
@@ -13,10 +12,10 @@ using namespace std;
 int main(int argc, char** argv){
 	ios::sync_with_stdio(false);
 	cin.tie(nullptr);
-	
+
 	string word;
 	int even, odd;
-	
+
 	getline(cin, word); //Read in T
 	while(getline(cin, word)){
 		even = odd = 0;
@@ -29,6 +28,6 @@ int main(int argc, char** argv){
 		if(even > odd) cout << "Even\n";
 		else cout << "Odd\n";
 	}
-	
+
 	return EXIT_SUCCESS;
 }

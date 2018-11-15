@@ -1,4 +1,3 @@
-//Status: Accepted
 /*
 Read in the correct answer and the user answer
 If they match then print Accepted
@@ -22,19 +21,19 @@ string removeWhitespace(string s){
 int main(int argc, char** argv){
 	ios::sync_with_stdio(false);
 	cin.tie(nullptr);
-	
+
 	string correctAnswer, userAnswer;
-	
+
 	getline(cin, correctAnswer);
 	getline(cin, userAnswer);
-	
+
 	if(correctAnswer == userAnswer)
 		cout << "Accepted";
 	else if(removeWhitespace(correctAnswer) == removeWhitespace(userAnswer))
 		cout << "Presentation Error";
 	else
 		cout << "Wrong Answer";
-	
+
 	return EXIT_SUCCESS;
 }
 

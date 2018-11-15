@@ -1,4 +1,3 @@
-//Status: Accepted
 /**
  * Read in N
  * Print 2 ^ N
@@ -12,5 +11,5 @@ public class Main {
        Scanner in = new Scanner(System.in);
        int N = in.nextInt();
        System.out.println(new BigInteger("2").pow(N));
-   } 
+   }
 }

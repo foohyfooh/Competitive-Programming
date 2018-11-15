@@ -1,4 +1,3 @@
-//Status: Accepted
 /*
 Summation upto fib(N) + 1 == fib(N + 2)
 For each test case
@@ -25,7 +24,7 @@ void matMul(lld A[2][2], lld B[2][2]){
 
 void matPow(lld A[2][2], lld b){
 	if(b == 1) {
-		memcpy(C, A, sizeof(C)); 
+		memcpy(C, A, sizeof(C));
 		return;
 	}
 	matPow(A, b / 2);
@@ -40,13 +39,13 @@ lld fib(lld N){
 }
 
 int main(int argc, char** argv){
-	
+
 	int numTests;
 	lld N;
 	for(scanf("%d", &numTests); numTests > 0; numTests--){
 		scanf("%lld", &N);
 		printf("%lld\n", fib(N));
-	}	
-	
+	}
+
 	return EXIT_SUCCESS;
 }

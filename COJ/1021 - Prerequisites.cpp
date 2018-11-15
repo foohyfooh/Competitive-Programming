@@ -1,4 +1,3 @@
-//Status: Accepted
 #include <iostream>
 #include <cstdlib>
 #include <string>
@@ -8,21 +7,21 @@ using std::string;
 using std::map;
 
 int main(int argc, char** argv) {
-	
+
 	int k, m;//Number of courses, Number of categories
 	std::cin >> k;
-	
+
 	while(k != 0){
 		std::cin >> m;
-		
+
 		string temp;
-		map<string, bool> courses; 
+		map<string, bool> courses;
 		while(k > 0){
 			std::cin >> temp;
 			courses[temp] = true;
 			k--;
-		}	
-		
+		}
+
 		bool requirementsMet = true;
 		while(m > 0){
 			int c, r;//Number of courses, Number of required courses
@@ -37,11 +36,11 @@ int main(int argc, char** argv) {
 			}
 			m--;
 		}
-		
+
 		std::cout << (requirementsMet ? "yes\n" : "no\n");
 		std::cin >> k;
 	}
-	
+
 	return EXIT_SUCCESS;
 }
 

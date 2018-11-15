@@ -1,4 +1,3 @@
-//Status: Accepted
 /*
 Read T
 For each test
@@ -12,7 +11,7 @@ using namespace std;
 const int COPPER = 1, TRIADS = 3, NONAS = 9, CUBICS = 27;
 
 int main(int argc, char** argv){
-	
+
 	int numTests, coin, coppers, triads, nonas, cubics;
 	scanf("%d", &numTests);
 	for(int t = 1; t <= numTests; t++){
@@ -28,6 +27,6 @@ int main(int argc, char** argv){
 		//printf("Case #%d: %d Coppers %d Triads %d Nonas %d Cubics\n", t, coppers, triads, nonas, cubics);
 		printf("Case #%d: %d Coppers %d Triads %d Nonas %d Cubics\n", t, coin, triads, nonas, cubics);
 	}
-	
+
 	return EXIT_SUCCESS;
 }

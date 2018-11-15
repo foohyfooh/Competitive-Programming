@@ -1,4 +1,3 @@
-//Status: Accepted
 /*
 Read C
 Sort C

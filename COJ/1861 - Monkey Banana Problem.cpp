@@ -1,4 +1,3 @@
-//Status: Accepted
 #include <iostream>
 #include <cstdlib>
 
@@ -7,20 +6,20 @@ Essentially Triangle Problem
 
 Read the number of N
 Number of rows = 2 * N - 1
-Number of items = N*N 
+Number of items = N*N
 Store in a 2D array [1..N, 1..N] where
 	if i <= N then in the top and thus numbers are in A[i, j]
 	else i > N then in the bottom and thus numbers are in A[i - N, i - N + j]
-	
+
 Determining Max Sum
 	Go through squares and add up the values
-	If i < N From a point (i, j): 
+	If i < N From a point (i, j):
 		left is (i + 1, j)
 		right is (i + 1, j + 1)
-	Else i >= N From a point (i, j):  
+	Else i >= N From a point (i, j):
 		If == 1: right is (i + 1, j)
 		Else If (2*N - i) == j: (i + 1, j - 1)
-		Else 
+		Else
 			left is (i + 1, j - 1)
 			right is (i + 1, j
 */
@@ -62,10 +61,10 @@ int bestSum(int N, int i, int j) {
 }
 
 int main(int argc, char** argv) {
-	
+
 	int t;//number of test cases
 	std::cin >> t;
-	
+
 	for(int a = 1; a <= t; a++){
 		int N, value;
 		std::cin >> N;
@@ -78,7 +77,7 @@ int main(int argc, char** argv) {
 			}
 		}
 		setM(N, 2*N-1, 1, T(N, 2*N-1, 1));
-		
+
 		//for(int i = 1; i <= N; i++){
 		//	for(int j = 1; j <= N; j++){
 		//		std::cout << T(N, i, j) << " ";
@@ -87,9 +86,9 @@ int main(int argc, char** argv) {
 		//	std::cout << std::endl;
 		//}
 		//std::cout << "\n\n\n\n";
-		
+
 		std::cout << "Case " << a << ": " << bestSum(N, 1, 1) << std::endl;
 	}
-	
+
 	return EXIT_SUCCESS;
 }
