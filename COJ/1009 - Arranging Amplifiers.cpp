@@ -21,8 +21,8 @@ auto cmp = [](int a, int b){
 priority_queue<int, vector<int>, decltype(cmp)> amps(cmp);
 
 int main(int argc, char** argv){
-	ios::sync_with_stdio(false);
-	cin.tie(nullptr);
+  ios::sync_with_stdio(false);
+  cin.tie(nullptr);
 
   int numTests;
   cin >> numTests;
@@ -40,5 +40,5 @@ int main(int argc, char** argv){
     cout << "\n";
   }
 
-	return EXIT_SUCCESS;
+  return EXIT_SUCCESS;
 }
