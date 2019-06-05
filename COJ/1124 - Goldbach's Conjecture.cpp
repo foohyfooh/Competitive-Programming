@@ -1,7 +1,7 @@
 /*
 Use the Sieve of Eranthoses to get prime numbers
 For each number
-    Go through the primes and anf see if the corresponding value is also prime
+    Go through the primes and see if the corresponding remainder is also prime
     Print the two prime numbers
 */
 #include <bits/stdc++.h>
@@ -18,7 +18,7 @@ int main(int argc, char** argv){
     isPrime.fill(true);
     isPrime[0] = isPrime[1] = false;
     primes.push_back(2);
-    for(int i = 2; i < MAX_NUMS; i += 2) isPrime[i] = false;
+    for(int i = 4; i < MAX_NUMS; i += 2) isPrime[i] = false;
     for(int i = 3; i < MAX_NUMS; i += 2){
         if(isPrime[i]){
             primes.push_back(i);
