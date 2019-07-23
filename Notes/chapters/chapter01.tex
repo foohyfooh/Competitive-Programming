@@ -1,0 +1,308 @@
+\section{Introduction}
+
+\subsection{Notation}
+\begin{verbatim}
+N denotes an arbitrary integer
+R denotes an arbitrary decimal value
+T denotes an arbitrary type
+K denotes a key, V denotes the value type
+T array[N] denotes an array from 0 to N-1
+F denotes a function
+\end{verbatim}
+
+
+\subsection{Order of Algorithms}
+\begin{math}
+O(1) - Constant \ Time \\
+O(\log(n)) - Logaithmic \ Time \\
+O(\sqrt{n}) - Square \ Root \ Time \\
+O(n) - Linear \ Time \\
+O(n\log(n)) - Quasilinear \ Time\\
+O(n^{2}) - Quadratic \ Time \\
+O(n^{3}) - Cubic \ Time \\
+O(n^{k}) - Polynomial \ Time \\
+O(2^{n}) - Exponential \ Time \\
+O(n!) - Factorial \ Time  \\
+\end{math}
+
+
+\subsection{Tips}
+\begin{itemize}
+\item In the competition, use language features to rename long type names to shorter ones to save time on those that are repeatedly used in the program.
+\item Check the bounds of input values to know if an inefficient solution that can be written faster than an efficient solution that take longer to write.
+\end{itemize}
+
+
+\clearpage
+
+\subsection{C Basics}
+
+\subsubsection{Input/Output (I/O)}
+\begin{lstlisting}[style=CStyle]
+#include <stdio.h>
+#include <stdlib.h>
+printf(<format_string> [, paramaters]); // for output
+scanf(<format_string> [, paramaters]); // for input
+\end{lstlisting}
+
+\subsubsection{Type Specifiers}
+\begin{lstlisting}[style=CStyle]
+int => %d
+float, double => %f
+char => %c
+bool => %b
+string => %s
+
+short T => %h[T]
+long T => %l[T]
+\end{lstlisting}
+
+\subsubsection{Math}
+\begin{lstlisting}[style=CStyle]
+#include <math.h>
+
+R log2 (R); //Base 2 Log values
+R log10(R); //Base 10 Log values
+
+// Integer log functions
+#define log_2 (x) ((int) log2(x))
+#define log_10(x) ((int) log10(x))
+\end{lstlisting}
+
+\subsubsection{Character Functions}
+\begin{lstlisting}[style=CStyle]
+#include <ctype.h>
+
+isspace(c);
+isalpha(c);
+\end{lstlisting}
+
+\subsubsection{Strings}
+\begin{lstlisting}[style=CStyle]
+#include <string.h>
+
+\end{lstlisting}
+
+\subsection{C++ Basics}
+
+\subsubsection{Input/Output (I/O)}
+\begin{lstlisting}[style=CStyle]
+#include <iostream>
+using namespace std;
+ios::sync_with_stdio(false);
+cin.tie(nullptr);
+cin >> <var>; for input
+cout << <var>; for output
+\end{lstlisting}
+
+\subsubsection{Types}
+\begin{lstlisting}[style=CStyle]
+int integer;
+float;
+double;
+char character;
+bool;
+T array[N];
+
+//Numerical Type Modifiers
+unsigned T;
+short T;
+long T;
+
+//Renaming Types
+typedef long long int lld, lli;
+typedef unsigned long long int llu, ulli;
+\end{lstlisting}
+
+\subsubsection{Macro Functions}
+\begin{lstlisting}[style=CStyle]
+#define abs(a) (a) > 0 ? (a) : (-(a))
+#define min(a, b) (a) < (b) ? (a) : (b)
+#define max(a, b) (a) > (b) ? (a) : (b)
+\end{lstlisting}
+
+\subsubsection{Lambda Functions}
+\begin{lstlisting}[style=CStyle]
+auto f = [](){};
+\end{lstlisting}
+
+\subsection{C Headers in C++}
+You can use C headers in C++ by prepending c to the from and removing the file extension
+
+\begin{lstlisting}[style=CStyle]
+//Example
+#include <stdio.h>
+//becomes
+#include <cstdio>
+\end{lstlisting}
+
+
+\subsection{C++ Standard Library Headers}
+
+Use  instead of bits/stdc++.h header instead of typing individual headers
+\begin{lstlisting}[style=CStyle]
+#include <bits/stdc++.h>
+\end{lstlisting}
+
+
+\subsubsection{Array}
+\begin{lstlisting}[style=CStyle]
+#include <array>
+
+array<T, N> arr;
+arr.fill(t); //Set all elements the value of t
+\end{lstlisting}
+
+\subsubsection{Vector}
+\begin{lstlisting}[style=CStyle]
+#include <vector>
+
+vector<T> v;
+
+v.push_back(t); //Insert at the end of the vector
+v.pop_back(); //Remove the last element of the vector
+v.insert(it, t) //Insert an item at the place of the iterator
+v.back() //Get the last element of the vector
+v.size(); // Get the length of the vector
+v.clear() //Remove all elements from the vector
+\end{lstlisting}
+
+\clearpage
+
+\subsubsection{Set}
+\begin{lstlisting}[style=CStyle]
+#include <set>
+
+set<T> s;
+s.empty() // Check if there are elements in the
+s.insert(t); //Insert an element into the set (if not in set)
+s.lower_bound(t); //Return iterator to the first value >=  t
+s.upper_bound(t); //Return iterator the the first value > t
+\end{lstlisting}
+
+\subsubsection{Stack}
+\begin{lstlisting}[style=CStyle]
+#include <stack>
+
+stack<T> s;
+s.empty()
+s.push(t);
+s.pop();
+s.front(); //View front element
+s.back(); //View last element
+\end{lstlisting}
+
+\subsubsection{Queue}
+\begin{lstlisting}[style=CStyle]
+#include <queue> //queue, priority_queue
+
+queue<T> q;
+q.empty(); // Check if the queue is empty
+q.psuh(t); // Enqueue element
+q.pop(); // Dequeue element
+q.front(); // View front element
+q.back(); // View last element
+\end{lstlisting}
+
+\subsubsection{Map}
+\begin{lstlisting}[style=CStyle]
+#include <map>
+
+map<K, V> m;
+m[k] = v;
+m[k];
+m.count(k);
+bool exists = m.find(k) != m.end();
+\end{lstlisting}
+
+\subsubsection{String}
+\begin{lstlisting}[style=CStyle]
+#include <string>
+
+string s;
+bool inString = s.find(pattern) != string::npos;
+string substr = s.substr(index, numCharacters);
+\end{lstlisting}
+
+\subsubsection{Pair}
+\begin{lstlisting}[style=CStyle]
+#include <utility>
+
+pair<T1, T2> p = make_pair(t1, t2)
+\end{lstlisting}
+
+\clearpage
+
+\subsubsection{Algorithm}
+\begin{lstlisting}[style=CStyle]
+#include <algorithm> //includes, binary_search, unique
+
+#define isSubset(s1, s2) includes(s1.begin(), s1.end(), s2.begin(), s2.end())
+
+bool cmp(T t1, T t2){
+	return t1 < t2;
+}
+
+//Sorting
+sort(container.begin(), container.end());
+sort(container.begin(), container.end(), cmp);
+
+//Remove duplicates
+container.erase(unique(container.begin(), container.end()), container.end());
+
+//Binary Search
+binary_search(container.begin(), container.end(), value, cmp);
+
+//Conditional Checks
+all_of(container.begin(), container.end(), predicate)
+none_of(container.begin(), container.end(), predicate)
+any_of(container.begin(), container.end(), predicate)
+
+//Lower and Upper Bound
+//Return an iterator to the first element >= value
+lower_bound(container.begin(), container.end(), value, cmp)
+//Return an iterator to the first element > value
+upper_bound(container.begin(), container.end(), value, cmp)
+\end{lstlisting}
+
+
+\clearpage
+
+
+\subsection{Python Basics}
+\begin{itemize}
+\item Python number type is useful for larger numbers
+\item Python is convenient for string manipulation
+\end{itemize}
+
+
+\subsubsection{Input/Output (I/O)}
+\begin{lstlisting}[style=PyStyle]
+from sys import stdin, stdout
+stdin.readline() instead of input() OR raw_input()
+
+stdout.write() instead of print()
+\end{lstlisting}
+
+\subsubsection{Types}
+\begin{lstlisting}[style=PyStyle]
+number = 1
+string = '' OR ""
+a_list = [] OR list()
+a_dict = {} OR dict()
+a_set = {v1, v2} OR set()
+a_tuple = (v1, ) # Ensure the comma is there for the type to be registered as tuple
+\end{lstlisting}
+
+\subsubsection{Strings}
+\begin{lstlisting}[style=PyStyle]
+s.find(pattern)
+s.split([split_by])
+\end{lstlisting}
+
+\subsubsection{Maths}
+\begin{lstlisting}[style=PyStyle]
+a ** p # a to the power of p
+\end{lstlisting}
+
+

@@ -1,0 +1,29 @@
+\section{Game Theory}
+
+\subsection{Impartial Combinatorial Games}
+
+\textbf{Conditions}
+\begin{itemize}
+\item There are two players
+\item There is a set of possible game states.
+\item Each games state has legal moves and both players have the same legal moves for each game state.
+\item The players take turns.
+\item The game ends when a terminal state (state without legal moves) is reached. The next player to move loses.
+\end{itemize}
+
+\noindent \textbf{Analysis}
+\begin{itemize}
+\item Winning or W-states: the current player is guaranteed to win (if they play optimally)
+\item Losing or L-states: the current player is guaranteed to lose (if the opponent plays optimally)
+\item All terminal states are L-states.
+\item Every W-State leads at least one move to an L-state.
+\item For every L-state, all moves lead to W-states.
+\end{itemize}
+
+\noindent \textbf{Solution} \\
+Using a bottom-up approach, \\
+If any move from the state leads to an L-state then it is a W-state \\
+If any move from the state leads to a W-state then it is an L-state \\
+
+
+\subsection{Sprague-Grundy Theorem}

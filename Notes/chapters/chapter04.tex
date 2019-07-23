@@ -1,0 +1,111 @@
+\section{Graphs}
+
+\subsection{Definitions}
+\lstinputlisting[style=CStyle]{./code/graph_definitions.cpp}
+
+%\paragraph{Notes}
+%\begin{itemize}
+%\item VertexColour can be replaced with chars for simplicity
+%\item Fields like id can be ignored and the index in the graph can used as in the id
+%\end{itemize}
+
+
+\subsection{Depth-First Search (DFS) and Breadth-First Search (BFS)} \label{graph_traversals}
+\lstinputlisting[style=CStyle]{./code/graph_traversals.cpp}
+
+
+\clearpage
+
+\subsection{Single Source Shortest Path - Dijkstra's Algorithm}
+\lstinputlisting[style=CStyle]{./code/dijkstra.cpp}
+
+
+\subsection{All Pairs Shortest Path - Floyd-Warshall}
+\lstinputlisting[style=CStyle]{./code/floyd-warshall.cpp}
+
+
+\subsection{Transitive Closure - Warshall's Algorithm}
+\lstinputlisting[style=CStyle]{./code/transitive_closure.cpp}
+
+
+\clearpage
+
+
+\subsection{Cycle Detection}
+\subsubsection{Directed Graph}
+\lstinputlisting[style=CStyle]{./code/cycle_detection_directed_graph.cpp}
+
+\subsubsection{Undirected Graph}
+\lstinputlisting[style=CStyle]{./code/cycle_detection_undirected_graph.cpp}
+
+
+\clearpage
+
+
+\subsection{Disjoint Sets} \label{disjoint_sets}
+
+\subsubsection{Set Implementation}
+This implementations is better for when the sizes of the sets are needed.
+\lstinputlisting[style=CStyle]{./code/disjoint_sets.cpp}
+
+\clearpage
+
+\subsubsection{Path Compression}
+\lstinputlisting[style=CStyle]{./code/path_compression_with_size.cpp}
+
+%\subsubsection{Tree Implementation}
+%\lstinputlisting[style=CStyle]{./code/disjoint_trees.cpp}
+
+
+\subsection{Minimum Cost Spanning Tree (MST) - Kruskal's Algorithm}
+Check \ref{disjoint_sets} \nameref{disjoint_sets}
+\lstinputlisting[style=CStyle]{./code/kruskal.cpp}
+
+
+\clearpage
+
+
+\subsection{Euler Tour} \label{euler_tour}
+Implementation of Euler Tour using \hyperref[graph_traversals]{DFS}
+\lstinputlisting[style=CStyle]{./code/euler_tour.cpp}
+
+
+\subsection{Lowest Common Ancestor (LCA)} \label{lca_graph}
+Refer to \ref{euler_tour} \nameref{euler_tour} \\
+Refer to {\ref{rmq} \nameref{rmq} \\
+Perform the \nameref{euler_tour} and then use \nameref{rmq} on the resulting vector. \\
+\lstinputlisting[style=CStyle]{./code/lca_using_rmq.cpp}
+\paragraph{Notes}
+\begin{itemize}
+\item Insert an arbitrary number into the tour vector before the Euler Tour since the implementations are 1-indexed.
+\end{itemize}
+
+
+\clearpage
+
+
+\subsection{Bipartite Graph}
+A bipartite graph is a k-partite graph where the vertices of the graph are in two distinct sets such that no vertex in the a set has an edge to any vertex in its set. \\
+Graph colouring using two colours can be used to determine if a graph is bipartite.
+\lstinputlisting[style=CStyle]{./code/bipartite_graph.cpp}
+\paragraph{Notes}
+\begin{itemize}
+	\item Like \hyperref[graph_traversals]{Depth First Search and Breadth First Search}, If the graph is not strongly connected then the algorithm just has to be run over every over vertex that isn't assigned a colour.
+	\item To extend it for non-strongly connected graph, you need to check if each sub-graph is bipartite and only then can the whole graph be considered bipartite.
+\end{itemize}
+\begin{lstlisting}[style=CStyle]
+bool allBipartite(){
+	for(i = 1; i <= N; i++)
+		if(colour[i] == GREY && !bipartite(i)) return false;
+	return true;
+}
+\end{lstlisting}
+
+
+\subsection{Matching - Hopcroft-Karp Algorithm}
+\lstinputlisting{./code/hopcroft_karp.cpp}
+
+
+\subsection{Max Flow}
+
+

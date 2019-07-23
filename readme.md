@@ -3,6 +3,7 @@
 The repository is meant to host the competitive programming solutions that I and my ICPC teams have made.
 
 ## Table of Contents
+- [Notes](/Notes) - This is a collection of some of the algorithms and tips that I have learnt during my time doing competitive progamming.
 - [COJ](/COJ) - [Site](http://coj.uci.cu/index.xhtml)
 - [MOG](/MOG) - [Site](http://matcomgrader.com/)
 - [SPOJ](/SPOJ) - [Site](https://www.spoj.com/)

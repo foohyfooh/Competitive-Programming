@@ -1,0 +1,86 @@
+\section{Dynamic Programming}
+
+\subsection{Knapsack Problem}
+
+\subsubsection{0/1 Knapsack}
+\lstinputlisting[style=CStyle, linerange={2-12}]{./code/knapsack.cpp}
+
+\subsubsection{Unbounded Knapsack}
+\lstinputlisting[style=CStyle, linerange={27-37}]{./code/knapsack.cpp}
+
+\subsubsection{Unbounded Knapsack using 1D Array}
+\lstinputlisting[style=CStyle, linerange={40-49}]{./code/knapsack.cpp}
+
+
+\subsection{Coin Change Problem}
+\lstinputlisting[style=CStyle, linerange={27}]{./code/coin_change.cpp}
+
+
+\clearpage
+
+
+\subsection{Triangle Problem}
+
+\subsubsection{Top-Down}
+\lstinputlisting[style=CStyle,  linerange={2-12}]{./code/triangle_problem.cpp}
+
+\subsubsection{Bottom-Up}
+\lstinputlisting[style=CStyle, linerange={15}]{./code/triangle_problem.cpp}
+
+
+\clearpage
+
+
+\subsection{Range Query}
+
+\subsubsection{Prefix Sum}
+Useful when all updates are done before querying \\
+Building - $O(n)$ \\
+Querying - $O(1)$
+\lstinputlisting[style=CStyle]{./code/prefix_sum.cpp}
+
+\subsubsection{Binary Indexed Tree (BIT) - Fenwick Tree}
+Useful when the updates and queries are interleaved. \\
+Building - $O(n\log(n))$ \\
+Updates and Queries are $O(\log(n))$
+\lstinputlisting[style=CStyle]{./code/binary_index_tree.cpp}
+
+\clearpage
+
+\subsubsection{Square Root Decomposition} \label{sqrt_decomposition}
+Calculating a property of a query in square root time \\
+In the code addition is done but min and max can be found using this method\\
+Building - $O(n)$ \\
+Updating - $O(1)$ \\
+Querying - $O(\sqrt{n})$
+\lstinputlisting[style=CStyle]{./code/sqrt_decomposition.cpp}
+
+\clearpage
+
+\subsubsection{Segment Tree} \label{segment_tree}
+Building - $O(n)$ \\
+Updating and Querying - $O(\log(n))$
+% \lstinputlisting[style=CStyle]{./code/segment_tree.cpp} %Implement where the queries are inclusive
+\lstinputlisting[style=CStyle]{./other/SegmentTreeAbstract.h}
+
+\subsubsection{Sparse Table} \label{sparse_table}
+A segment table is used to compute the value in a range that satisfies the condition of the table, e.g. min number in range, max number in range, gcd of the range. \\
+As you go down the sparse table the index represents the condition on the length of $2^{i}$. \\
+So i = 0 represents intervals of 1 \\
+So i = 1 represents intervals of 2 \\
+So i = 2 represents intervals of 4 \\
+etc. \\
+Building - $O(n\log(n))$ \\
+Querying - $O(1)$
+\lstinputlisting[style=CStyle]{./code/sparse_table.cpp}
+\paragraph{Notes}
+\begin{itemize}
+\item Element 0 in each array of the table represents the size of the array at that index.
+\item The initial array could be set on the sparse table at index 0 since it is intervals of 1.
+\end{itemize}
+
+\subsubsection{Range Minimum Query (RMQ)} \label{rmq}
+This is a range query where the desired result is the minimum of some range. \\
+Refer to \ref{sqrt_decomposition} \nameref{sqrt_decomposition}. Replace addition with min function. \\
+Refer to \ref{segment_tree} \nameref{segment_tree}. Repace func with min function. \\
+Refer to \ref{sparse_table} \nameref{sparse_table}. Replace func with min function. \\

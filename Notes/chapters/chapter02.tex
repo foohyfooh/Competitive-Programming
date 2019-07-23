@@ -1,0 +1,61 @@
+\section{Sorting and Searching}
+
+\subsection{Comparison Based Sorts}
+Best time of comparison based sorting is  $O(n \log(n))$
+\begin{lstlisting}[style=CStyle]
+#include <algorithm>
+sort(container.begin(), container.end());
+sort(container.begin(), container.end(), cmp);
+
+#include <cstdlib>
+qsort(array, numElements, elementSize, cmp);
+
+// Example comparision function for integers
+int cmp(const void* aPtr, const void* bPtr){
+	int a = *((int*) aPtr), b = *((int*) bPtr);
+	return a - b;
+}
+\end{lstlisting}
+
+\subsubsection{Heap Sort}
+Refer to \ref{heaps} \nameref{heaps}
+
+\subsection{Bucket Sort}
+
+
+\subsection{Radix Sort}
+Time O(dK) \\
+Space O(K) \\
+where d is the number of digits, K is the range of the N numbers \\
+
+\subsection{Binary Search}
+\lstinputlisting[style=CStyle]{./code/binary_search.cpp}
+
+\paragraph{Note}
+\noindent C and C++ have built in binary search methods so you don't have to redefine one
+
+\begin{lstlisting}[style=CStyle]
+#include <cstdio>
+void* bsearch (const void* key, const void* base, size_t num, size_t size, int (*compar)(const void*,const void*));
+
+// Example comparision function for integers
+int cmp(const void* aPtr, const void* bPtr){
+	int a = *((int*) aPtr), b = *((int*) bPtr);
+	return a - b;
+}
+\end{lstlisting}
+
+\begin{lstlisting}[style=CStyle]
+#include <algorithm>
+template< class ForwardIt, class T, class Compare >
+bool binary_search( ForwardIt first, ForwardIt last, const T& value, Compare comp );
+
+template<class T>
+bool comp(const T &a, const T &b);
+\end{lstlisting}
+
+\subparagraph{Note}
+comp is only needed if T doesn't have a comparison function defined on it
+
+\subsection{Binary Search for Sorted Insertion}
+\lstinputlisting[style=CStyle]{./code/binary_search_for_insertion.cpp}

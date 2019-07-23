@@ -1,0 +1,102 @@
+\section{Maths}
+
+\subsection{Greatest Common Divisor (GCD)}
+Use the Euclidean Algorithm to determine the gcd of two numbers
+\lstinputlisting[style=CStyle]{./code/gcd.cpp}
+\lstinputlisting[style=PyStyle]{./code/gcd.py}
+
+
+\subsection{Extended Euclidean Algorithm}
+This builds on the Euclidean Algorithm to find $x$ and $y$ where $d = gcd(a, b) = ax + by$
+\lstinputlisting[style=PyStyle]{./code/gcd_extended.py}
+
+
+\subsection{Modular Exponentiation}
+Determining $a^b \ mod \ n$ \\
+In the following code, the array b[] is the bits of the power b.
+\lstinputlisting[style=CStyle]{./code/modular_exponentiation.cpp}
+
+
+\subsection{Fastest Exponentiation}
+Determining $a^b$
+\lstinputlisting[style=CStyle]{./code/fastest_exponentiation.cpp}
+
+
+\subsection{Matrices}
+\lstinputlisting[style=CStyle]{./code/matrix_functions.cpp}
+
+
+\subsection{Fibonacci}
+Fibonacci is defined as \\ \\
+$
+F_n =
+\left\{
+\begin{array}{ll}
+0                      & \mbox{if } n =    0 \\
+1                      & \mbox{if } n =    1 \\
+F_{n - 1} + F_{n - 2}  & \mbox{if } n \geq 2 \\
+\end{array}
+\right.
+$ \\ \\
+
+\noindent
+A faster method to calculate Fibonacci is to use Matrix Exponentiation where it is defined as follows \\
+\noindent
+$
+\begin{bmatrix}
+F_{n + 1} \\
+F_{n} \\
+\end{bmatrix} =
+\begin{bmatrix}
+1 & 1 \\
+1 & 0 \\
+\end{bmatrix}
+\begin{bmatrix}
+F_{n} \\
+F_{n - 1} \\
+\end{bmatrix}
+$ \\ \\
+
+\noindent
+It can be generalised to the following to obtain the nth term \\
+$
+\begin{bmatrix}
+F_{n + 1} \\
+F_{n} \\
+\end{bmatrix} =
+\begin{bmatrix}
+1 & 1 \\
+1 & 0 \\
+\end{bmatrix}^{n - 2}
+\begin{bmatrix}
+F_{2} \\
+F_{1} \\
+\end{bmatrix}
+$ \\
+where $F_{2} = 1$ and $F_{1} = 1$ are the base cases
+
+\subsection{Sieve of Eranthoses}
+
+\subsection{Formulae}
+\subsubsection{Polygon}
+\begin{itemize}
+\item area of triangle given 3 sides:  a = sqrt(p*(p-a)*(p-b)*(p-c)) where p = (a+b+c)/2
+\item area of n sided regular polygon given length of 1 side,s: a = (s*s)*n/4tan(180/n)
+\item area of n sided regular polygon given circumradius (radius of circle around polygon): \\ a = ((r*r)*n)*sin(360/n)/2
+\item area of n sided regular polygon given inradius (radius of circle inside polygon) or the apothem (the perpendicular distance from center to a side): a = ((a*a)*n)*tan(180/n)
+\item perimeter of a circle: 2*pi*r
+\item area of irregular polygon: break into triangles by segmenting at vertices
+\item Number of diagonals in a polygon is n sides: n*2(n-3)/2
+\end{itemize}
+
+\subsubsection{Radii}
+\begin{itemize}
+\item radius of a regular polygon (or the circumradius): r = s/(2*sin(180/n))
+\item circumradius of a regular polygon given the apothem (apothem is inradius): r = a/(cos*(180/n))
+\item inradius (apothem) given length of side, s: ir = s/(2*tan(180/n))
+\item inradius given circumradius: ir = r*cos(180/n)
+\end{itemize}
+
+\subsubsection{Combinations and Permutations}
+
+
