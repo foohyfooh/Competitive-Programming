@@ -13,5 +13,7 @@ The repository is meant to host the competitive programming solutions that I and
 - [Darien Jardine](https://github.com/Darien117)
 - [Anderson Singh](https://github.com/AndersonSingh)
 - [Shiva Ramoudith](https://github.com/shiv1994)
+- [Sterling Ramroach](https://github.com/Sterls)
+- [Kris Manohar](https://github.com/justkrismanohar)
 - [Keanu Nichols](https://github.com/kmn5409)
 - [Daniel Gordon](https://github.com/Dannie1o1)
